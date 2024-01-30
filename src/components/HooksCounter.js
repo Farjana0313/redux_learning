@@ -1,19 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
-// import { decrement, increment } from "../redux/counter/actions";
-import { decrement, increment } from "../redux/dynamicCounter/actions";
+import { decrement, increment } from "../redux/counter/actions";
 
-
-
-function DynamicHooksCounter() {
-    const count = useSelector((state) => state.dynamicCounter.value);
+function HooksCounter() {
+    const count = useSelector((state) => state.counter.value);
     const dispatch = useDispatch();
 
-    const incrementHandeler = (value) => {
-        dispatch(increment(value));
-    }
-    const decrementHandeler = (value) => {
-        dispatch(decrement(value));
-    }
+    const incrementHandler = () => {
+        dispatch(increment());
+    };
+
+    const decrementHandler = () => {
+        dispatch(decrement());
+    };
 
     return (
         <div className="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
@@ -21,13 +19,13 @@ function DynamicHooksCounter() {
             <div className="flex space-x-3">
                 <button
                     className="bg-indigo-400 text-white px-3 py-2 rounded shadow"
-                    onClick={() => incrementHandeler(5)}
+                    onClick={incrementHandler}
                 >
                     Increment
                 </button>
                 <button
                     className="bg-red-400 text-white px-3 py-2 rounded shadow"
-                    onClick={() => decrementHandeler(2)}
+                    onClick={decrementHandler}
                 >
                     Decrement
                 </button>
@@ -36,4 +34,4 @@ function DynamicHooksCounter() {
     );
 }
 
-export default DynamicHooksCounter;
+export default HooksCounter;
