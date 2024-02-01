@@ -3,13 +3,13 @@ import { DDECREMENT, DINCREMENET } from "./actionTypes";
 export const increment = (value) => {
     return {
         type: DINCREMENET,
-        payload: value
+        payload: value,
     };
 };
 
 export const decrement = (value) => {
     return {
         type: DDECREMENT,
-        payload: value
+        payload: value,
     };
 };

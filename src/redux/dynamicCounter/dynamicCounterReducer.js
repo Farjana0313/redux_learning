@@ -24,4 +24,3 @@ const dynamicCounterReducer = (state = initialState, action) => {
 };
 
 export default dynamicCounterReducer;
-

@@ -4,7 +4,7 @@ import dynamicCounterReducer from "./dynamicCounter/dynamicCounterReducer";
 
 const rootReducer = combineReducers({
     counter: counterReducer,
-    dynamicCounter: dynamicCounterReducer
-})
+    dynamicCounter: dynamicCounterReducer,
+});
 
 export default rootReducer;

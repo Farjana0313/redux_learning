@@ -1,7 +1,10 @@
 import { connect } from "react-redux";
 import { decrement, increment } from "../redux/counter/actions";
+import React from 'react'
 
-function Counter({ count, increment, decrement }) {
+
+
+function VariableCounter({ count, increment, decrement }) {
     return (
         <div className="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
             <div className="text-2xl font-semibold">{count}</div>
@@ -37,4 +40,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(VariableCounter);
